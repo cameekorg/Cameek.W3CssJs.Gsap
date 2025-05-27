@@ -15,4 +15,9 @@
         <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.13"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <Content Include=".scripts\download-gsap.bat" />
+      <Content Include=".scripts\download-gsap.sh" />
+    </ItemGroup>
+
 </Project>
