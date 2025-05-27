@@ -1,59 +1,49 @@
-﻿@echo.
-@echo Download PrismJS
-@echo ================
-@echo https://www.jsdelivr.com/package/npm/prismjs
+﻿@echo off
+@echo.
+@echo Download GSAP and Plugins
+@echo =========================
+@echo https://www.jsdelivr.com/package/npm/gsap
 @echo.
 
 :: Shorten the prompt temporarily
 @prompt $S
 
-:: Change the current directory to the script's directory
+:: Change to the script's directory
 @pushd %~dp0
 
 @echo Configuring Version and URLs
 @echo ----------------------------
-set VERSION=1.30.0
-set URL_JS=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/prism.min.js
-set URL_CSS=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/themes/prism.min.css
+set VERSION=3.13.0
+set BASE_URL=https://cdn.jsdelivr.net/npm/gsap@%VERSION%/dist
 
-:: Plugins
-set URL_PLUGIN_LINE_NUMBERS_JS=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/plugins/line-numbers/prism-line-numbers.min.js
-set URL_PLUGIN_LINE_NUMBERS_CSS=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/plugins/line-numbers/prism-line-numbers.min.css
+:: Core and Plugin URLs
+set URL_GSAP=%BASE_URL%/gsap.min.js
+set URL_DRAGGABLE=%BASE_URL%/Draggable.min.js
+set URL_DRAWSVG=%BASE_URL%/DrawSVGPlugin.min.js
+set URL_EASEL=%BASE_URL%/EaselPlugin.min.js
+set URL_FLIP=%BASE_URL%/Flip.min.js
+set URL_GSDEVTOOLS=%BASE_URL%/GSDevTools.min.js
+set URL_INERTIA=%BASE_URL%/InertiaPlugin.min.js
+set URL_MOTIONPATHHELPER=%BASE_URL%/MotionPathHelper.min.js
+set URL_MOTIONPATH=%BASE_URL%/MotionPathPlugin.min.js
+set URL_MORPHSVG=%BASE_URL%/MorphSVGPlugin.min.js
+set URL_OBSERVER=%BASE_URL%/Observer.min.js
+set URL_PHYSICS2D=%BASE_URL%/Physics2DPlugin.min.js
+set URL_PHYSICSPROPS=%BASE_URL%/PhysicsPropsPlugin.min.js
+set URL_PIXI=%BASE_URL%/PixiPlugin.min.js
+set URL_SCRAMBLETEXT=%BASE_URL%/ScrambleTextPlugin.min.js
+set URL_SCROLLTRIGGER=%BASE_URL%/ScrollTrigger.min.js
+set URL_SCROLLSMOOTHER=%BASE_URL%/ScrollSmoother.min.js
+set URL_SCROLLTO=%BASE_URL%/ScrollToPlugin.min.js
+set URL_SPLITTEXT=%BASE_URL%/SplitText.min.js
+set URL_TEXTP=%BASE_URL%/TextPlugin.min.js
+set URL_EASEPACK=%BASE_URL%/EasePack.min.js
+set URL_CUSTOMEASE=%BASE_URL%/CustomEase.min.js
+set URL_CUSTOMBOUNCE=%BASE_URL%/CustomBounce.min.js
+set URL_CUSTOMWIGGLE=%BASE_URL%/CustomWiggle.min.js
 
-:: Languages
-set URL_LANG_BASH=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/components/prism-bash.min.js
-set URL_LANG_BATCH=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/components/prism-batch.min.js
-set URL_LANG_C=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/components/prism-c.min.js
-set URL_LANG_CPP=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/components/prism-cpp.min.js
-set URL_LANG_CSHARP=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/components/prism-csharp.min.js
-set URL_LANG_CSS=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/components/prism-css.min.js
-::::::set URL_LANG_HTML=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/components/prism-html.min.js
-set URL_LANG_JAVA=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/components/prism-java.min.js
-set URL_LANG_JAVASCRIPT=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/components/prism-javascript.min.js
-set URL_LANG_JSON=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/components/prism-json.min.js
-set URL_LANG_KOTLIN=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/components/prism-kotlin.min.js
-set URL_LANG_PHP=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/components/prism-php.min.js
-set URL_LANG_POWERSHELL=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/components/prism-powershell.min.js
-set URL_LANG_PROPERTIES=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/components/prism-properties.min.js
-set URL_LANG_PYTHON=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/components/prism-python.min.js
-set URL_LANG_RUBY=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/components/prism-ruby.min.js
-set URL_LANG_SHELL=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/components/prism-shell-session.min.js
-set URL_LANG_SQL=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/components/prism-sql.min.js
-set URL_LANG_XML=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/components/prism-xml-doc.min.js
-set URL_LANG_YAML=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/components/prism-yaml.min.js
-
-:: License
-set URL_LICENSE=https://raw.githubusercontent.com/PrismJS/prism/v%VERSION%/LICENSE
-
-:: Add URLs for all themes
-set URL_THEME_DEFAULT=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/themes/prism.min.css
-set URL_THEME_COY=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/themes/prism-coy.min.css
-set URL_THEME_DARK=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/themes/prism-dark.min.css
-set URL_THEME_FUNKY=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/themes/prism-funky.min.css
-set URL_THEME_OKAIDIA=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/themes/prism-okaidia.min.css
-set URL_THEME_SOLARIZED_LIGHT=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/themes/prism-solarizedlight.min.css
-set URL_THEME_TOMORROW=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/themes/prism-tomorrow.min.css
-set URL_THEME_TWILIGHT=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/themes/prism-twilight.min.css
+:: License (optional)
+set URL_LICENSE=https://raw.githubusercontent.com/greensock/GSAP/master/LICENSE
 
 @echo.
 @echo.
@@ -62,46 +52,32 @@ set URL_THEME_TWILIGHT=https://cdn.jsdelivr.net/npm/prismjs@%VERSION%/themes/pri
 @echo ----------------------------------------
 set TARGET_WWW_DIR=../wwwroot
 set TARGET_JS_DIR=%TARGET_WWW_DIR%/js
-set TARGET_CSS_DIR=%TARGET_WWW_DIR%/css
+set TARGET_LICENSE=%TARGET_WWW_DIR%/LICENSE-gsap.txt
 
-set TARGET_JS_FILE=%TARGET_JS_DIR%/prism.min.js
-set TARGET_CSS_FILE=%TARGET_CSS_DIR%/prism.min.css
-
-set TARGET_PLUGIN_LINE_NUMBERS_JS=%TARGET_JS_DIR%/prism-line-numbers.min.js
-set TARGET_PLUGIN_LINE_NUMBERS_CSS=%TARGET_CSS_DIR%/prism-line-numbers.min.css
-
-set TARGET_LANG_BASH=%TARGET_JS_DIR%/prism-bash.min.js
-set TARGET_LANG_BATCH=%TARGET_JS_DIR%/prism-batch.min.js
-set TARGET_LANG_C=%TARGET_JS_DIR%/prism-c.min.js
-set TARGET_LANG_CPP=%TARGET_JS_DIR%/prism-cpp.min.js
-set TARGET_LANG_CSHARP=%TARGET_JS_DIR%/prism-csharp.min.js
-set TARGET_LANG_CSS=%TARGET_JS_DIR%/prism-css.min.js
-::::::set TARGET_LANG_HTML=%TARGET_JS_DIR%/prism-html.min.js
-set TARGET_LANG_JAVA=%TARGET_JS_DIR%/prism-java.min.js
-set TARGET_LANG_JAVASCRIPT=%TARGET_JS_DIR%/prism-javascript.min.js
-set TARGET_LANG_JSON=%TARGET_JS_DIR%/prism-json.min.js
-set TARGET_LANG_KOTLIN=%TARGET_JS_DIR%/prism-kotlin.min.js
-set TARGET_LANG_PHP=%TARGET_JS_DIR%/prism-php.min.js
-set TARGET_LANG_POWERSHELL=%TARGET_JS_DIR%/prism-powershell.min.js
-set TARGET_LANG_PROPERTIES=%TARGET_JS_DIR%/prism-properties.min.js
-set TARGET_LANG_PYTHON=%TARGET_JS_DIR%/prism-python.min.js
-set TARGET_LANG_RUBY=%TARGET_JS_DIR%/prism-ruby.min.js
-set TARGET_LANG_SHELL=%TARGET_JS_DIR%/prism-shell-session.min.js
-set TARGET_LANG_SQL=%TARGET_JS_DIR%/prism-sql.min.js
-set TARGET_LANG_XML=%TARGET_JS_DIR%/prism-xml-doc.min.js
-set TARGET_LANG_YAML=%TARGET_JS_DIR%/prism-yaml.min.js
-
-set TARGET_LICENSE=%TARGET_WWW_DIR%/LICENSE-prismjs.txt
-
-:: Add target file paths for all themes
-set TARGET_THEME_DEFAULT=%TARGET_CSS_DIR%/prism.min.css
-set TARGET_THEME_COY=%TARGET_CSS_DIR%/prism-coy.min.css
-set TARGET_THEME_DARK=%TARGET_CSS_DIR%/prism-dark.min.css
-set TARGET_THEME_FUNKY=%TARGET_CSS_DIR%/prism-funky.min.css
-set TARGET_THEME_OKAIDIA=%TARGET_CSS_DIR%/prism-okaidia.min.css
-set TARGET_THEME_SOLARIZED_LIGHT=%TARGET_CSS_DIR%/prism-solarizedlight.min.css
-set TARGET_THEME_TOMORROW=%TARGET_CSS_DIR%/prism-tomorrow.min.css
-set TARGET_THEME_TWILIGHT=%TARGET_CSS_DIR%/prism-twilight.min.css
+set TARGET_GSAP=%TARGET_JS_DIR%/gsap.min.js
+set TARGET_DRAGGABLE=%TARGET_JS_DIR%/Draggable.min.js
+set TARGET_DRAWSVG=%TARGET_JS_DIR%/DrawSVGPlugin.min.js
+set TARGET_EASEL=%TARGET_JS_DIR%/EaselPlugin.min.js
+set TARGET_FLIP=%TARGET_JS_DIR%/Flip.min.js
+set TARGET_GSDEVTOOLS=%TARGET_JS_DIR%/GSDevTools.min.js
+set TARGET_INERTIA=%TARGET_JS_DIR%/InertiaPlugin.min.js
+set TARGET_MOTIONPATHHELPER=%TARGET_JS_DIR%/MotionPathHelper.min.js
+set TARGET_MOTIONPATH=%TARGET_JS_DIR%/MotionPathPlugin.min.js
+set TARGET_MORPHSVG=%TARGET_JS_DIR%/MorphSVGPlugin.min.js
+set TARGET_OBSERVER=%TARGET_JS_DIR%/Observer.min.js
+set TARGET_PHYSICS2D=%TARGET_JS_DIR%/Physics2DPlugin.min.js
+set TARGET_PHYSICSPROPS=%TARGET_JS_DIR%/PhysicsPropsPlugin.min.js
+set TARGET_PIXI=%TARGET_JS_DIR%/PixiPlugin.min.js
+set TARGET_SCRAMBLETEXT=%TARGET_JS_DIR%/ScrambleTextPlugin.min.js
+set TARGET_SCROLLTRIGGER=%TARGET_JS_DIR%/ScrollTrigger.min.js
+set TARGET_SCROLLSMOOTHER=%TARGET_JS_DIR%/ScrollSmoother.min.js
+set TARGET_SCROLLTO=%TARGET_JS_DIR%/ScrollToPlugin.min.js
+set TARGET_SPLITTEXT=%TARGET_JS_DIR%/SplitText.min.js
+set TARGET_TEXTP=%TARGET_JS_DIR%/TextPlugin.min.js
+set TARGET_EASEPACK=%TARGET_JS_DIR%/EasePack.min.js
+set TARGET_CUSTOMEASE=%TARGET_JS_DIR%/CustomEase.min.js
+set TARGET_CUSTOMBOUNCE=%TARGET_JS_DIR%/CustomBounce.min.js
+set TARGET_CUSTOMWIGGLE=%TARGET_JS_DIR%/CustomWiggle.min.js
 
 @echo.
 @echo.
@@ -109,53 +85,36 @@ set TARGET_THEME_TWILIGHT=%TARGET_CSS_DIR%/prism-twilight.min.css
 @echo Creating Directories
 @echo --------------------
 if not exist "%TARGET_JS_DIR%" mkdir "%TARGET_JS_DIR%"
-if not exist "%TARGET_CSS_DIR%" mkdir "%TARGET_CSS_DIR%"
 @echo.
 @echo.
 
 @echo Downloading Files
 @echo -----------------
-curl -o %TARGET_JS_FILE% %URL_JS%
-curl -o %TARGET_CSS_FILE% %URL_CSS%
-
-:: Plugin - Line Numbers
-curl -o %TARGET_PLUGIN_LINE_NUMBERS_JS% %URL_PLUGIN_LINE_NUMBERS_JS%
-curl -o %TARGET_PLUGIN_LINE_NUMBERS_CSS% %URL_PLUGIN_LINE_NUMBERS_CSS%
-
-:: Languages
-curl -o %TARGET_LANG_BASH% %URL_LANG_BASH%
-curl -o %TARGET_LANG_BATCH% %URL_LANG_BATCH%
-curl -o %TARGET_LANG_C% %URL_LANG_C%
-curl -o %TARGET_LANG_CPP% %URL_LANG_CPP%
-curl -o %TARGET_LANG_CSHARP% %URL_LANG_CSHARP%
-curl -o %TARGET_LANG_CSS% %URL_LANG_CSS%
-::::::curl -o %TARGET_LANG_HTML% %URL_LANG_HTML%
-curl -o %TARGET_LANG_JAVA% %URL_LANG_JAVA%
-curl -o %TARGET_LANG_JAVASCRIPT% %URL_LANG_JAVASCRIPT%
-curl -o %TARGET_LANG_JSON% %URL_LANG_JSON%
-curl -o %TARGET_LANG_KOTLIN% %URL_LANG_KOTLIN%
-curl -o %TARGET_LANG_PHP% %URL_LANG_PHP%
-curl -o %TARGET_LANG_POWERSHELL% %URL_LANG_POWERSHELL%
-curl -o %TARGET_LANG_PROPERTIES% %URL_LANG_PROPERTIES%
-curl -o %TARGET_LANG_PYTHON% %URL_LANG_PYTHON%
-curl -o %TARGET_LANG_RUBY% %URL_LANG_RUBY%
-curl -o %TARGET_LANG_SHELL% %URL_LANG_SHELL%
-curl -o %TARGET_LANG_SQL% %URL_LANG_SQL%
-curl -o %TARGET_LANG_XML% %URL_LANG_XML%
-curl -o %TARGET_LANG_YAML% %URL_LANG_YAML%
-
-:: License
+curl -o %TARGET_GSAP% %URL_GSAP%
+curl -o %TARGET_DRAGGABLE% %URL_DRAGGABLE%
+curl -o %TARGET_DRAWSVG% %URL_DRAWSVG%
+curl -o %TARGET_EASEL% %URL_EASEL%
+curl -o %TARGET_FLIP% %URL_FLIP%
+curl -o %TARGET_GSDEVTOOLS% %URL_GSDEVTOOLS%
+curl -o %TARGET_INERTIA% %URL_INERTIA%
+curl -o %TARGET_MOTIONPATHHELPER% %URL_MOTIONPATHHELPER%
+curl -o %TARGET_MOTIONPATH% %URL_MOTIONPATH%
+curl -o %TARGET_MORPHSVG% %URL_MORPHSVG%
+curl -o %TARGET_OBSERVER% %URL_OBSERVER%
+curl -o %TARGET_PHYSICS2D% %URL_PHYSICS2D%
+curl -o %TARGET_PHYSICSPROPS% %URL_PHYSICSPROPS%
+curl -o %TARGET_PIXI% %URL_PIXI%
+curl -o %TARGET_SCRAMBLETEXT% %URL_SCRAMBLETEXT%
+curl -o %TARGET_SCROLLTRIGGER% %URL_SCROLLTRIGGER%
+curl -o %TARGET_SCROLLSMOOTHER% %URL_SCROLLSMOOTHER%
+curl -o %TARGET_SCROLLTO% %URL_SCROLLTO%
+curl -o %TARGET_SPLITTEXT% %URL_SPLITTEXT%
+curl -o %TARGET_TEXTP% %URL_TEXTP%
+curl -o %TARGET_EASEPACK% %URL_EASEPACK%
+curl -o %TARGET_CUSTOMEASE% %URL_CUSTOMEASE%
+curl -o %TARGET_CUSTOMBOUNCE% %URL_CUSTOMBOUNCE%
+curl -o %TARGET_CUSTOMWIGGLE% %URL_CUSTOMWIGGLE%
 curl -o %TARGET_LICENSE% %URL_LICENSE%
-
-:: Download all themes
-curl -o %TARGET_THEME_DEFAULT% %URL_THEME_DEFAULT%
-curl -o %TARGET_THEME_COY% %URL_THEME_COY%
-curl -o %TARGET_THEME_DARK% %URL_THEME_DARK%
-curl -o %TARGET_THEME_FUNKY% %URL_THEME_FUNKY%
-curl -o %TARGET_THEME_OKAIDIA% %URL_THEME_OKAIDIA%
-curl -o %TARGET_THEME_SOLARIZED_LIGHT% %URL_THEME_SOLARIZED_LIGHT%
-curl -o %TARGET_THEME_TOMORROW% %URL_THEME_TOMORROW%
-curl -o %TARGET_THEME_TWILIGHT% %URL_THEME_TWILIGHT%
 
 @echo.
 @echo.
@@ -168,7 +127,7 @@ curl -o %TARGET_THEME_TWILIGHT% %URL_THEME_TWILIGHT%
 
 @echo.
 @echo ===================================
-@echo Finished downloading PrismJS files
+@echo Finished downloading GSAP files
 @echo.
 
 @pause
