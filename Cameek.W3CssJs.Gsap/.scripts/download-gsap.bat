@@ -43,7 +43,7 @@ set URL_CUSTOMBOUNCE=%BASE_URL%/CustomBounce.min.js
 set URL_CUSTOMWIGGLE=%BASE_URL%/CustomWiggle.min.js
 
 :: License (optional)
-set URL_LICENSE=https://raw.githubusercontent.com/greensock/GSAP/master/LICENSE
+set URL_LICENSE=https://gsap.com/standard-license
 
 @echo.
 @echo.
@@ -114,7 +114,7 @@ curl -o %TARGET_EASEPACK% %URL_EASEPACK%
 curl -o %TARGET_CUSTOMEASE% %URL_CUSTOMEASE%
 curl -o %TARGET_CUSTOMBOUNCE% %URL_CUSTOMBOUNCE%
 curl -o %TARGET_CUSTOMWIGGLE% %URL_CUSTOMWIGGLE%
-curl -o %TARGET_LICENSE% %URL_LICENSE%
+:::curl -o %TARGET_LICENSE% %URL_LICENSE%
 
 @echo.
 @echo.
