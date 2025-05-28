@@ -2,10 +2,10 @@
 
 using System.Diagnostics.CodeAnalysis;
 
-namespace Cameek.W3CssJs.PrismJs;
+namespace Cameek.W3CssJs.Gsap;
 
 [SuppressMessage("ReSharper", "UnusedMember.Global")]
-public class PathsPrismJs
+public class PathsGsapJs
 {
     /// <summary>
     /// Main CSS file for PrismJS syntax highlighting
