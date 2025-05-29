@@ -40,9 +40,30 @@ In your `index.html` (Blazor WebAssembly) or `_Host.cshtml` (Blazor Server), inc
 
 ```html
 <script src="_content/Cameek.W3CssJs.Gsap/js/gsap.min.js"></script>
-<script src="_content/Cameek.W3CssJs.Gsap/js/ScrollTrigger.min.js"></script>
+
 <script src="_content/Cameek.W3CssJs.Gsap/js/Draggable.min.js"></script>
-<!-- include additional plugins as needed -->
+<script src="_content/Cameek.W3CssJs.Gsap/js/DrawSVGPlugin.min.js"></script>
+<script src="_content/Cameek.W3CssJs.Gsap/js/EaselPlugin.min.js"></script>
+<script src="_content/Cameek.W3CssJs.Gsap/js/Flip.min.js"></script>
+<script src="_content/Cameek.W3CssJs.Gsap/js/GSDevTools.min.js"></script>
+<script src="_content/Cameek.W3CssJs.Gsap/js/InertiaPlugin.min.js"></script>
+<script src="_content/Cameek.W3CssJs.Gsap/js/MotionPathHelper.min.js"></script>
+<script src="_content/Cameek.W3CssJs.Gsap/js/MotionPathPlugin.min.js"></script>
+<script src="_content/Cameek.W3CssJs.Gsap/js/MorphSVGPlugin.min.js"></script>
+<script src="_content/Cameek.W3CssJs.Gsap/js/Observer.min.js"></script>
+<script src="_content/Cameek.W3CssJs.Gsap/js/Physics2DPlugin.min.js"></script>
+<script src="_content/Cameek.W3CssJs.Gsap/js/PhysicsPropsPlugin.min.js"></script>
+<script src="_content/Cameek.W3CssJs.Gsap/js/PixiPlugin.min.js"></script>
+<script src="_content/Cameek.W3CssJs.Gsap/js/ScrambleTextPlugin.min.js"></script>
+<script src="_content/Cameek.W3CssJs.Gsap/js/ScrollTrigger.min.js"></script>
+<script src="_content/Cameek.W3CssJs.Gsap/js/ScrollSmoother.min.js"></script>
+<script src="_content/Cameek.W3CssJs.Gsap/js/ScrollToPlugin.min.js"></script>
+<script src="_content/Cameek.W3CssJs.Gsap/js/SplitText.min.js"></script>
+<script src="_content/Cameek.W3CssJs.Gsap/js/TextPlugin.min.js"></script>
+<script src="_content/Cameek.W3CssJs.Gsap/js/EasePack.min.js"></script>
+<script src="_content/Cameek.W3CssJs.Gsap/js/CustomEase.min.js"></script>
+<script src="_content/Cameek.W3CssJs.Gsap/js/CustomBounce.min.js"></script>
+<script src="_content/Cameek.W3CssJs.Gsap/js/CustomWiggle.min.js"></script>
 ```
 
 ### Example Usage
