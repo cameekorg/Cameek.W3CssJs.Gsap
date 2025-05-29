@@ -1,0 +1,15 @@
+﻿@page "/test-animated-box"
+@inject IJSRuntime JS
+<h3>TestAnimatedBox</h3>
+
+<div id="animatedBox">Animate me!</div>
+
+@* Bootstrap Button to trigger animation *@
+<button class="btn btn-primary" @onclick="AnimateBox">Test Animate</button>
+
+@code {
+    private async Task AnimateBox()
+    {
+        await JS.InvokeVoidAsync("gsap.to", "#animatedBox", new { duration = 2, x = 100 });
+    }
+}
