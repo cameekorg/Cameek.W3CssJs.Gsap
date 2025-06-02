@@ -10,7 +10,7 @@
 
         <!-- NuGet Metadata -->
         <PackageId>Cameek.W3CssJs.Gsap</PackageId>
-        <Version>3.13.2</Version>
+        <Version>3.13.3</Version>
         <Authors>Cameek</Authors>
         <Company>Cameek</Company>
         <Description>Static Razor Class Library with GSAP (GreenSock Animation Platform) assets for use in Blazor WebAssembly and Blazor Server apps.</Description>
@@ -27,7 +27,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.*"/>
+        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.0"/>
     </ItemGroup>
 
     <ItemGroup>
