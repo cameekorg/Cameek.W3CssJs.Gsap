@@ -23,13 +23,13 @@
 Install from NuGet:
 
 ```bash
-dotnet add package Cameek.W3CssJs.Gsap --version 3.13.5
+dotnet add package Cameek.W3CssJs.Gsap --version 3.13.3
 ```
 
 Or reference directly in your `.csproj`:
 
 ```xml
-<PackageReference Include="Cameek.W3CssJs.Gsap" Version="3.13.5" />
+<PackageReference Include="Cameek.W3CssJs.Gsap" Version="3.13.3" />
 ```
 
 ---
