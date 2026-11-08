@@ -23,13 +23,13 @@
 Install from NuGet:
 
 ```bash
-dotnet add package Cameek.W3CssJs.Gsap --version 3.13.3
+dotnet add package Cameek.W3CssJs.Gsap --version 3.15.1
 ```
 
 Or reference directly in your `.csproj`:
 
 ```xml
-<PackageReference Include="Cameek.W3CssJs.Gsap" Version="3.13.3" />
+<PackageReference Include="Cameek.W3CssJs.Gsap" Version="3.15.1" />
 ```
 
 ---
@@ -116,9 +116,28 @@ Then use in Razor components:
 
 ---
 
+## Refresh bundled assets
+
+The wrapper bundles GSAP **3.15.1** from its official npm distribution. Existing
+script URLs stay under `_content/Cameek.W3CssJs.Gsap/js/`; matching source maps
+are included for browser debugging.
+
+From the repository root, run the downloader (Python 3 is required):
+
+```bash
+bash .scripts/download-gsap.sh
+```
+
+On Windows, run `.scripts\download-gsap.bat` with Python 3 available as `python`.
+The shared script pins the upstream version and npm SHA-512 integrity, downloads
+all files before replacing assets, and refreshes the license from its official page.
+No npm installation or CDN connection is required by consuming applications.
+
 ## 📄 License
 
-Licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+The bundled GSAP assets use GSAP's [Standard No Charge License](https://gsap.com/standard-license/),
+not the MIT license. The package includes its text at
+`_content/Cameek.W3CssJs.Gsap/LICENSE-gsap.txt` and as the NuGet package license.
 
 ---
 

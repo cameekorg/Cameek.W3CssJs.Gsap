@@ -6,3 +6,6 @@
 *.dll -text
 *.dll.* -text
 *.gif filter=lfs diff=lfs merge=lfs -text
+
+# Preserve upstream minified files byte-for-byte, including their whitespace.
+Cameek.W3CssJs.Gsap/wwwroot/js/* -whitespace

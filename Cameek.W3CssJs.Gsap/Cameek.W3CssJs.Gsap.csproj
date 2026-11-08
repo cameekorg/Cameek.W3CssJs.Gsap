@@ -10,12 +10,12 @@
 
         <!-- NuGet Metadata -->
         <PackageId>Cameek.W3CssJs.Gsap</PackageId>
-        <Version>3.13.3</Version>
+        <Version>3.15.1</Version>
         <Authors>Cameek</Authors>
         <Company>Cameek</Company>
         <Description>Static Razor Class Library with GSAP (GreenSock Animation Platform) assets for use in Blazor WebAssembly and Blazor Server apps.</Description>
         <PackageTags>blazor;gsap;greensock;animation;razor-class-library;webassets</PackageTags>
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageLicenseFile>staticwebassets/LICENSE-gsap.txt</PackageLicenseFile>
         <RepositoryUrl>https://github.com/cameekorg/Cameek.W3CssJs.Gsap</RepositoryUrl>
         <PackageProjectUrl>https://github.com/cameekorg/Cameek.W3CssJs.Gsap</PackageProjectUrl>
         <IncludeSymbols>true</IncludeSymbols>
